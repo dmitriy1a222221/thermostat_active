@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Thermostat simulation</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/main.js" defer></script>
+	<script src="./js/particles.min.js" defer></script>
+	<script src="./js/app.js" defer></script>
+</head>
+<body>
+<div id="particles-js"></div>
+	<div class="wrapApp">
+		<div class="wrap-head-main">
+			<header class="header">
+				<h1 class="titleApp">
+					Thermostat simulation
+				</h1>
+			</header>
+			<div class="wrap-main">
+				<main class="mainContent">
+					<div class="wrapForDisplay">
+						<img src="./img/thermTransparent.png" alt="" class="shema">
+						<img src="./img/cooler.png" alt="" class="cooler">
+						<img src="./img/spiral2.png" alt="" class="spiral">
+						<div class="indicator indicator_1"></div>
+						<div class="indicator indicator_2"></div>
+						<div class="display">
+							<div class="displayReleWrap">
+								<div>
+									<span>Rele1:</span>
+									<span class="rele1">0 deg</span>
+									<span class="rele1State">Off</span>
+								</div>
+								<div>
+									<span>Rele2:</span>
+									<span class="rele2">0 deg</span>
+									<span class="rele2State">Off</span>
+								</div>
+							</div>
+							<div class="displayCurrentT">
+								<span>Temp:</span>
+								<span id="currTemp">0 deg</span>
+							</div>
+						</div>
+					</div>
+					<div class="nav">
+						<div class="input-wrap">
+							<input data-id="temp"  class="nav-item-input nav-item-input_1" type="range" min="0" max="99" step="1" value="0">
+							<input data-id="rele1" class="nav-item-input nav-item-input_2" type="range" min="0" max="99" step="1" value="0">
+							<input data-id="rele2" class="nav-item-input nav-item-input_3" type="range" min="0" max="99" step="1" value="0">
+						</div>
+						<button class="btnStart" onclick="thermostatLogic()">Refresh</button>
+					</div>
+
+				</main>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="wrapper_footer-element">
+				<p>Copyright 2018. Studio DmitriKas.<br> All Rights Reserved.</p>
+				<div class="iconsBlock">
+					<a target="_blank" href="https://www.facebook.com/dmitriy.kasianchyk"><img src="./img/facebook.svg" width="30" height="30"></a>
+					<a target="_blank" href="https://www.linkedin.com/in/dmitriy-kasyanchuk-20b290163/"><img src="./img/linkedin.svg" width="30" height="30"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
